@@ -1,0 +1,361 @@
+@import "variable", "mixins";
+
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Regular.ttf");
+}
+
+body, .horizontal-line {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-wrapper {
+  flex-direction: column;
+  font-family: Lato;
+}
+
+.header,
+.navigation,
+.content,
+.footer {
+  margin: 0 auto;
+  max-width: 65%;
+}
+
+.advertising-baner {
+  @include fontStyle(0.6em);
+
+  position: relative;
+  padding: 10px 0;
+  text-align: center;
+  color: $secondryTextColor;
+  background: $advertBgColor;
+}
+
+.header {
+  padding: 10px 0;
+
+  &-select {
+    &-icon {
+      width: 20px;
+      height: 15px;
+    }
+
+    &-currency {
+      border: none;
+      background: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &-title {
+    width: 12%;
+  }
+
+  &-btn-card {
+    @include fontStyle(0.6em);
+
+    padding: 10px 25px;
+    background: $mainBgColor;
+    border: 2px solid $btnColor;
+
+    &:hover {
+      cursor: pointer;
+      background: $btnColor;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.navigation {
+  &-icon-burger,
+  &-icons-heart,
+  &-icons-search {
+    @include iconStyle;
+  }
+
+  &-icons {
+    &-heart {
+      border-right: 1px dotted $mainColor;
+      padding-right: 10px;
+    }
+
+    &-search {
+      padding-left: 8px;
+    }
+  }
+
+  &-menu {
+    width: 50%;
+    list-style: none;
+  
+    &-item {
+      @include fontStyle(0.6em);
+
+      &:hover {
+        @include hoverStyle($btnColor);
+      } 
+    }
+  }
+}
+
+.arrow {
+  position: relative;
+  padding-right: 15px;
+
+  &::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    background: url("../assets/arrow.png") no-repeat;
+    background-size: 5px;
+    right: 5px;
+    bottom: 3px;
+  }
+}
+
+.content {
+  margin-top: 35px;
+  margin-bottom: 60px;
+  align-items: flex-start;
+
+  &-pictures {
+    width: 56%;
+    flex-wrap: wrap;
+    
+    &-item {
+      width: 22%;
+      height: 120px;
+      background-color: #e1e1e1;
+      
+      &:first-child {
+        width: 100%;
+        height: 500px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &-info {
+    flex-direction: column;
+    width: 40%;
+
+    &-back-to {
+      text-decoration: none;
+      color: $secondryTextColor;
+      font-size: 0.7em;
+
+      &-highlight {
+        color: $detailTextColor;
+      }
+    }
+
+    &-title {
+      font-size: 1.1em;
+      margin-bottom: 0;
+    }
+
+    &-review {
+      @include fontStyle(0.4em);
+
+      justify-content: flex-start;
+
+      &-stars {
+        justify-content: flex-start;
+        padding-right: 15px;
+        
+        &-yellow, &-gray {
+          @include iconStyle;
+
+          padding: 8px 0;
+        }
+      }
+
+      &-qty {
+        color: $secondryTextColor;
+        padding-right: 15px;
+        border-right: 1px solid $secondryTextColor;
+      }
+
+      &-add {
+        padding-left: 15px;
+        text-decoration: underline; 
+      }
+    }
+
+    &-price {
+      margin-top: 5px;
+      font-size: 1.1em;
+      color: $detailTextColor;
+    }
+  
+    &-properties {
+      font-size: 0.7em;
+
+      &-prop {
+        margin: 5px 0;
+      }
+  
+      &-value {
+        color: $detailTextColor;
+      }
+    }
+  
+    &-description, &-list {
+      margin-top: 20px;
+      color: $secondryTextColor;
+      font-size: 0.7em;
+    }
+
+    &-list {
+      padding-left: 15px;
+      list-style-image: $mainBgColor;
+
+      &-item {
+        padding-top: 5px;
+      }
+    }
+
+    &-select {
+      @include fontStyle(0.7em);
+
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+
+      &-wrapper {
+        width: 100%;
+        justify-content: space-between;
+        height: 100px;
+      }
+
+      &-item {
+        width: 39%;
+
+        &-field {
+          width: 100%;
+          height: 30px;
+          -webkit-border-radius: 0;
+          border: 1px solid #e1e1e1;
+          background: $mainBgColor;
+          color: $secondryTextColor;
+
+          &-placeholder {
+            display: none;
+            color: #e1e1e1;
+          }
+
+          &-qty {
+            height: 23px;
+            padding-left: 10px;
+            border: 1px solid #e1e1e1;
+            border-radius: 4px;
+            color: $secondryTextColor;
+          }
+        }
+
+        &:last-child {
+          width: 20%;
+        }
+      }
+
+      &-clear {
+        font-size: 0.6em;
+        color: $mainColor;
+      }
+    }
+    
+    &-btn {
+      height: 80px;
+
+      &-item-1, &-item-2 {
+        @include fontStyle(0.5em);
+
+        width: 48%;
+        height: 40px;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          @include hoverStyle($secondryTextColor, $btnColor);
+        }
+      }
+
+      &-item-1 {
+        background: $mainColor;
+        color: $mainBgColor;
+      }
+
+      &-item-2 {
+        background: none;
+        color: $mainColor;
+        padding-left: 10px;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 15%;
+          background: url("../assets/like.svg") no-repeat;
+          display: inline-block;
+          width: 10px; 
+          height: 10px;
+        }
+      }
+    }
+
+    &-share {
+      justify-content: space-between;
+
+      &-title {
+        @include fontStyle(0.4em);
+
+        width: 25%;
+      }
+
+      &-block {
+        width: 80%;
+      }
+
+      &-item {
+        width: 33%;
+      }
+
+      &-link {
+        &-icon {
+          width: 90%;
+          height: 15px;
+        }
+      }
+
+      &:hover {
+        @include hoverStyle;
+      }
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.6em;
+  color: $secondryTextColor;
+}
+
+@import "media";

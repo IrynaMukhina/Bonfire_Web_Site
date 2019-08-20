@@ -1,0 +1,15 @@
+@mixin iconStyle {
+  width: 10px;
+  height: 10px;
+} 
+
+@mixin fontStyle($size) {
+  text-transform: uppercase;
+  font-size: $size;
+}
+
+@mixin hoverStyle($color: inherit, $bg: inherit) {
+  cursor: pointer;
+  color: $color;
+  background: $bg;
+}

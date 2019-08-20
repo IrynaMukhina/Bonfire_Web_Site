@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="./css/style.css" rel="stylesheet">
+  <title>Bonfire Web Site</title>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="advertising-baner">start selling your products or buy them from anywhere!</div>
+
+    <header class="flex header">
+      <div class="flex header-select">
+        <img src="./assets/united-states.svg" alt="USA flag" class="header-select-icon"/>
+        <select name="currency" class="header-select-currency">
+          <option class="header-select-currency-option" value="USD" slected>USD</option>
+          <option class="header-select-currency-option" value="EUR">EUR</option>
+          <option class="header-select-currency-option" value="GBP">GBP</option>
+        </select>
+      </div>
+      <img src="./assets/Logo.png" class="header-title"/>
+      <button class="header-btn-card">Cart(3)</button>
+    </header>
+
+    <hr class="horizontal-line"/>
+
+    <nav class="flex navigation">
+      <img src="./assets/menu.svg" alt="Burger menu icon" class="navigation-icon-burger"/>
+      <ul class ="flex navigation-menu">
+        <li class="navigation-menu-item">Home</li>
+        <li class="navigation-menu-item arrow">Man</li>
+        <li class="navigation-menu-item arrow">Woman</li>
+        <li class="navigation-menu-item">Lookbook</li>
+        <li class="navigation-menu-item">About</li>
+        <li class="navigation-menu-item">Blog</li>
+      </ul>
+      <div class="navigation-icons">
+        <img src="./assets/like.svg" alt="Heart icon" class="navigation-icons-heart"/>
+        <img src="./assets/magnifying-glass.svg" alt="Search icon" class="navigation-icons-search"/>
+      </div>
+    </nav>
+
+    <hr class="horizontal-line"/>
+
+    <main class="flex content">
+
+      <section class="flex content-pictures">
+        <div class="content-pictures-item"></div>
+        <div class="content-pictures-item"></div>
+        <div class="content-pictures-item"></div>
+        <div class="content-pictures-item"></div>
+        <div class="content-pictures-item"></div>
+      </section>
+
+      <section class="content-info">
+        <a href="#" class="content-info-back-to">&lt;Back to 
+          <span class="content-info-back-to-highlight">Woman</span>
+        </a>
+        <h2 class="content-info-title">The Atelier Tailored Coat</h2>
+        <div class="flex content-info-review">
+          <div class="flex content-info-review-stars">
+            <img src="./assets/star-yellow.svg" alt="Star picture" class="content-info-review-stars-yellow"/>
+            <img src="./assets/star-yellow.svg" alt="Star picture" class="content-info-review-stars-yellow"/>
+            <img src="./assets/star-yellow.svg" alt="Star picture" class="content-info-review-stars-yellow"/>
+            <img src="./assets/star-yellow.svg" alt="Star picture" class="content-info-review-stars-yellow"/>
+            <img src="./assets/star-gray.svg" alt="Star picture" class="content-info-review-stars-gray"/>
+          </div>
+          <p class="content-info-review-qty">3 Review(s)</p>
+          <a class="content-info-review-add">Add a Review</a>
+        </div>
+        <p class="content-info-price">$499.00</p>
+        <div class="content-info-properties">
+          <p class="content-info-properties-prop">Availability : 
+            <span class="content-info-properties-value">In stock</span>
+          </p>
+          <p class="content-info-properties-prop">Product Code : 
+            <span class="content-info-properties-value">#4657</span>
+          </p>
+          <p class="content-info-properties-prop">Tags : 
+            <span class="content-info-properties-value">Fashion, Hood, Classick</span>
+          </p>
+        </div>
+        <p class="content-info-description">
+          Sleek, polished, and boasting an impeccably modern fit, this blue, 2-but-
+          ton Lazio suit features a notch lapel, flap pockets, and accompanying flat
+          front trousers—all in pure wool by Vitale Barberis Canonico.
+        </p>
+        <ul class="content-info-list">
+          <li class="content-info-list-item">Dark blue suit for a tone-on-tone look</li>
+          <li class="content-info-list-item">Regular fit</li>
+          <li class="content-info-list-item">100% Cotton</li>
+          <li class="content-info-list-item">Free shipping with 4 days delivery</li>
+        </ul>
+        <div class="flex content-info-select">
+          <div class="flex content-info-select-wrapper">
+            <div class="content-info-select-item">
+              <p class="content-info-select-item-title">Color</p>
+              <select class="content-info-select-item-field">
+                <option class="content-info-select-item-field-placeholder" selected>Select Color</option>
+                <option value="Red">Red</option>
+                <option value="Green">Green</option>
+                <option value="Purple">Purple</option>
+                <option value="Black">Black</option>
+              </select>
+            </div>
+            <div class="content-info-select-item">
+              <p class="content-info-select-item-title">Size</p>
+              <select class="content-info-select-item-field">
+                <option class="content-info-select-item-field-placeholder" selected>Select Size</option>
+                <option>XS</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+            </div>
+            <div class="content-info-select-item">
+              <p class="content-info-select-item-title">Qty</p>
+              <input type="number" name="quantity" min="0" max="100" step="1" value="1"
+                class="content-info-select-item-field-qty">
+            </div>
+          </div>
+          <a href="#" class="content-info-select-clear">Clear selection</a>
+        </div>
+        <div class="flex content-info-btn">
+          <button class="content-info-btn-item-1">Add to card</button>
+          <button class="content-info-btn-item-2">Add to wishlist</button>
+        </div>
+        <hr class="horizontal-line"/>
+        <div class="flex content-info-share">
+          <p class="content-info-share-title">Share this</p>
+          <div class="flex content-info-share-block">
+            <div class="content-info-share-item">
+              <a class="content-info-share-link">
+                <img src="./assets/Facebook.png" alt="Facebook icon" class="content-info-share-link-icon"/>
+              </a>
+            </div>
+            <div class="content-info-share-item">
+              <a class="content-info-share-link">
+                <img src="./assets/Twitter.png" alt="Tweeter icon" class="content-info-share-link-icon"/>
+              </a>
+            </div>
+            <div class="content-info-share-item">
+              <a class="content-info-share-link">
+                <img src="./assets/Pinterest.png" alt="Pinterest icon" class="content-info-share-link-icon"/>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="horizontal-line"/>
+      </section>
+
+    </main>
+
+    <hr class="horizontal-line"/>
+
+    <footer class="footer">
+      <p class="footer-text">Made with Love & Coffee © 2015 Design Lazy. All Rights Reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

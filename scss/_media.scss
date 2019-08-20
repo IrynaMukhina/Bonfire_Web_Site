@@ -1,0 +1,134 @@
+@media screen and (max-width: 1050px) {
+  .header,
+  .navigation,
+  .content,
+  .footer {
+    max-width: 80%;
+  }
+
+  .content {
+    &-info {
+      &-select {
+        &-wrapper {
+          height: 180px;
+          margin-bottom: 20px;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        &-item {
+          width: 100%;
+
+          &-field {
+            width: 100%;
+          }
+        }
+      }
+
+      &-btn {
+        flex-direction: column;
+        height: 100px;
+        margin-top: 20px;
+
+        &-item-1, &-item-2 {
+          width: 90%;
+        }
+
+        &-item-2 {
+          margin-bottom: 10px;
+        }
+      }
+
+      &-share {
+        flex-direction: column;
+
+        &-title {
+          text-align: center;
+        }
+
+        &-block {
+          flex-direction: column;
+          padding-bottom: 10px;
+        }
+
+        &-item {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header,
+  .navigation,
+  .content,
+  .footer {
+    max-width: 90%;
+  }
+
+  .navigation {
+    flex-direction: column;
+    text-align: center;
+
+    &-menu {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+
+      &-item {
+        width: 100%;
+        padding-top: 10px;
+      }
+    }
+  }
+
+  .content {
+    &-pictures {
+      flex-wrap: wrap;
+
+      &-item {
+        width: 48%;
+        height: 100px;
+        margin-top: 10px;
+
+        &:first-child {
+          width: 100%;
+          height: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content {
+    flex-direction: column;
+
+    &-pictures {
+      width: 100%;
+
+      &-item {
+        width: 48%;
+        height: 100px;
+        margin-top: 10px;
+
+        &:first-child {
+          width: 100%;
+          height: 300px;
+        }
+      }
+    }
+
+    &-info {
+      width: 100%;
+
+      &-share {
+        &-item {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
